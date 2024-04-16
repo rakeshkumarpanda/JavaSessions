@@ -1,0 +1,91 @@
+﻿Conditional Blocks:
+These are the blocks helps to execute the certain piece of code based the given criteria/condition
+1. if block:
+package conditionalblocks;
+public class FindEven {
+    public static void main(String[] args){
+        int n = 10;
+        if(n%2==0){
+            System.out.println("Number is even");
+        }
+    }
+}
+Syntax of if block:
+if(<condition(s)>){
+	//code
+}
+Note:
+All the condition(s) should be of relational operator or relational operator+logical operator
+
+2. if-else block:
+package conditionalblocks;
+public class FindEvenOdd {
+    public static void main(String[] args){
+        int n = 10;
+        if(n%2==0){
+            System.out.println("Number is even");
+        }
+        else {
+            System.out.println("Number is odd");
+        }
+    }
+}
+Note: In the above program if the condition fails then the else block will be executed
+
+3. if-else-if:
+package conditionalblocks;
+import java.util.Scanner;
+public class DivisibleBy2_3 {
+    public static void main(String[] args) {
+//        int n = 11;
+        //Code to take the user input
+        Scanner scan = new Scanner(System.in);//Here we are creating the object of the scanner class
+        System.out.println("Enter a number: ");
+        int n = scan.nextInt();
+        if(n%2==0 && n%3==0)
+            System.out.println("Divisible by both 2 & 3");
+        else if(n%2==0)
+            System.out.println("Divisible by 2");
+        else if(n%3==0)
+            System.out.println("Divisible by 3");
+        else
+            System.out.println("Not divisible either by 2 or 3");
+    }
+}
+
+
+4. Nested if-else:
+package conditionalblocks;
+import java.util.Scanner;
+public class DivisibleBy2_3_02 {
+    public static void main(String[] args) {
+        //Code to take the user input
+        Scanner scan = new Scanner(System.in);//Here we are creating the object of the scanner class
+        System.out.println("Enter a number: ");
+        int n = scan.nextInt();
+        if(n%2==0){
+            if(n%3==0){
+                System.out.println(n+" is divisible by both 2 and 3");
+            }
+            else
+                System.out.println(n+" is divisible by 2 only");
+        }
+        if(n%3==0){
+            System.out.println(n+" is divisible by 3 only");
+        }
+    }
+}
+5. Ternary operator:
+package conditionalblocks;
+public class FindEvenOdd_TernaryOperator {
+    public static void main(String[] args){
+        int n = 11;
+        String result = (n%2==0)?"Even":"Odd";
+        System.out.println(result);
+    }
+}
+/*
+Syntax for ternary operator
+<condition>?true:false
+ */
+
